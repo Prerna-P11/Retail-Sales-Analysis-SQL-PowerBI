@@ -1,7 +1,7 @@
 # Retail-Sales-Analysis-SQL-PowerBI
 End-to-end sales analysis using SQL and Power BI on 2023 retail data, focused on customer insights, product trends, and strategic business recommendations.
 
-# This project analyzes 2023 retail sales data to uncover insights across time, customer behavior, product performance, pricing, and seasonal trends.
+# This project analyses 2023 retail sales data to uncover insights across time, customer behavior, product performance, pricing, and seasonal trends.
 
 ## 📌 Objective
 To generate data-driven business recommendations using SQL queries and Power BI dashboards.
