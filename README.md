@@ -14,7 +14,7 @@ To generate data-driven business recommendations using SQL queries and Power BI 
 - **Electronics** drive the highest revenue.
 - **Clothing** sells the most units.
 - **Beauty** category has the highest price per unit but lower volume — suggesting pricing optimization potential.
-- **Females** and **Males** product category preferrence. 
+- **Females** and **Males** product category preference. 
 - **May, October, and December** are peak revenue months, highlighting strong seasonal trends.
 
 ##  Deliverables
