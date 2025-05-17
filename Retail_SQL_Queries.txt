@@ -1,3 +1,7 @@
+-- SQL Queries Used in the "Retail Sales & Consumer Behavior Analysis" Project
+-- By Prerna | Dataset: 2023 Retail Transactions
+
+
 | Sales & Product Performance |
 
 
