@@ -110,40 +110,7 @@ SELECT
   SUM(`Total Amount`) AS total_revenue FROM retailsdataset 
   GROUP BY age_group ORDER BY total_revenue DESC;
 
-*Query4: What is the most popular product category per age group?
-SELECT 
-  age_group, `Product Category`, total_quantity
-FROM (
-  SELECT 
-    CASE 
-      WHEN Age BETWEEN 15 AND 25 THEN '15-25'
-      WHEN Age BETWEEN 26 AND 35 THEN '26-35'
-      WHEN Age BETWEEN 36 AND 45 THEN '36-45'
-      WHEN Age BETWEEN 46 AND 55 THEN '46-55'
-      WHEN Age > 55 THEN '56+'
-      ELSE 'Unknown'
-    END AS age_group,
-    `Product Category`,
-    SUM(Quantity) AS total_quantity FROM retailsdataset
-  GROUP BY age_group, `Product Category` ORDER BY total_quantity
-)AS grouped_data
-WHERE (age_group, total_quantity) IN (
-  SELECT 
-    age_group,
-    MAX(total_quantity)
-  FROM (
-    SELECT 
-      CASE 
-        WHEN Age BETWEEN 15 AND 25 THEN '15-25'
-        WHEN Age BETWEEN 26 AND 35 THEN '26-35'
-        WHEN Age BETWEEN 36 AND 45 THEN '36-45'
-        WHEN Age BETWEEN 46 AND 55 THEN '46-55'
-        WHEN Age > 55 THEN '56+'
-        ELSE 'Unknown'
-      END AS age_group, `Product Category`, SUM(Quantity) AS total_quantity
-    FROM retailsdataset GROUP BY age_group, `Product Category`) AS totals GROUP BY age_group );
-
-*Query5: Top product category by gender.
+*Query4: Top product category by gender.
 SELECT Gender, `Product Category`, total_quantity
 FROM (
   SELECT 
@@ -156,7 +123,7 @@ FROM (
 ) ranked_data
 WHERE row_num = 1;
 
-*Query6: Top 50 customers by total spending.
+*Query5: Top 50 customers by total spending.
 SELECT `Customer ID`, SUM(`Total Amount`) AS total_spending FROM retailsdataset GROUP BY `Customer ID` ORDER BY total_spending DESC LIMIT 50;
 
 
